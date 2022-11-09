@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+    <title>Create your account</title>
+  </head>
+  <body>
+    <nav><%- include('../partials/nav.ejs')%></nav>
+    <br />
+    <h2>Organizer's details</h2>
+    <h4>
+        Get in touch!
+    </h4>
+<br/>
+    <div class="container-login">
+      <div class="row g-3 mb-3 container-newuser">
+        <div class="joingame">
+       Organizer's Name: <%=activity.organizer%><br/>
+       Organizer's Email: <%=activity.organizerEmail%><br/>
+       <br/>
+    </div>
+    <div class="joingame-button">
+    <a href="/game"><button class="btn btn-light">Back to other games</button></a></div>
+      </div>
+    </div>
+  </body>
+</html>

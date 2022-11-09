@@ -1,0 +1,20 @@
+<div class="header">
+  <a href="/game"><h1>A J A K</h1></a>
+</div>
+  <div class="nav">
+    <% if (locals.currentUser) { %>
+        <a href="/game/new"
+      ><button
+        type="button"
+        name="button"
+        class="btn btn-outline-warning new-sport"
+      >
+        Organize A Sport
+      </button></a
+    >
+    <% }else{ %>
+        <p class="organize">Sign up to organize your sport game</p>
+    <% } %>
+    
+  
+</div>

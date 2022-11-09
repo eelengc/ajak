@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs')%>
+    <title>New Activity</title>
+  </head>
+  <body>
+    <nav><%- include('../partials/nav.ejs')%></nav>
+    <br />
+    <div class="container container-activity">
+      <h2>Edit game details below:</h2>
+      <div class="card-newgame">
+        <div class="row mb-3">
+          <form action="/game/<%=activity.id%>?_method=PUT" method="POST">
+            <label class="col-sm-2 col-form-label">Game:</label
+            ><input
+              type="text"
+              name="game"
+              value="<%=activity.game%>"
+            /><br /><br />
+            <label class="col-sm-2 col-form-label">Players Needed:</label
+            ><input
+              type="number"
+              name="numberOfPlayers"
+              value="<%=activity.numberOfPlayers%>"
+            /><br /><br />
+            <label class="col-sm-2 col-form-label"> Location:</label
+            ><input
+              type="text"
+              name="location"
+              value="<%=activity.location%>"
+            /><br /><br />
+            <label class="col-sm-2 col-form-label">Date:</label>
+            <input
+              type="text"
+              name="date"
+              value="<%=activity.date%>"
+            /><br /><br />
+            <label class="col-sm-2 col-form-label">Organizer:</label>
+            <input type="text" name="organizer"
+            value="<%=activity.organizer%>"/><br /><br />
+            <input
+              type="submit"
+              value="Update game"
+              class="btn btn-light btn-lg"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+</footer>
+</html>

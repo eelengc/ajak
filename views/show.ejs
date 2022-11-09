@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+    <title>Game</title>
+  </head>
+  <body>
+    <nav><%- include('../partials/nav.ejs')%></nav>
+    <br />
+    <div class="container container-activity">
+    <div class="card-newgame">
+      <h2><%=activity.game%></h2>
+      <br />
+      Number of Players needed:
+      <p style="display: inline"><%=activity.numberOfPlayers%></p>
+      <br />
+      Location:
+      <p style="display: inline"><%=activity.location%></p>
+      <br />
+      Date:
+      <p style="display: inline"><%=activity.date%></p>
+      <br />
+      Organizer:
+      <p style="display: inline"><%=activity.organizer%></p>
+      <br /><br />
+      <div class="btn-group">
+        <% if (locals.currentUser){ %>
+          <% if (currentUser.name === activity.organizer){ %>
+            <a href="/game/<%=activity.id%>/edit"
+              ><button type="button" name="button" class="btn btn-light">
+                EDIT
+              </button></a
+            >
+            <form action="/game/<%=activity.id%>?_method=DELETE" method="POST">
+              <button class="btn btn-light">DELETE</button>
+            </form>
+          <% } else if (currentUser.name !== activity.organizer){ %>
+            <a href="/game/<%=activity.id%>/joingame"><button class="btn btn-light">Join game</button></a>
+          <% }%>
+        <% } %>
+        
+          <a href="/game"><button class="btn btn-light">Back to other games</button></a>
+        </div>
+    </div>
+</div>
+    <br />
+  </body>
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+</footer>
+</html>

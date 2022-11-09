@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs', {currentUser}) %>
+    <title>Ajak</title>
+  </head>
+  <body>
+    <nav><%- include('../partials/nav.ejs')%></nav>
+    <br />
+    <div class="container-img">
+      <div class="container">
+        <h2>All Upcoming Sport Activities</h2>
+        <br />
+        <div class="container-activity">
+          <% activity.forEach(function(activity){ %>
+          <div class="card">
+            <div class="card-body">
+              <h3><%=activity.game%> - <%=activity.location%></h3>
+              <h4><%=activity.date%></h4>
+              <br />
+              <a href="/game/<%=activity.id%>"
+                ><button class="btn btn-light">See details</button></a
+              >
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer><%- include('../partials/footer.ejs') %></footer>
+</html>

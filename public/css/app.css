@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+
+.header {
+  background-image: url('https://images.unsplash.com/photo-1556056504-5c7696c4c28d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vdGJhbGwlMjBmaWVsZHxlbnwwfHwwfHw%3D&w=1000&q=80');
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+  height: 25vh;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 80px;
+}
+
+.header h1{
+  font-size: 1.2em;
+  text-shadow: 2px 2px 2px #ffffff;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  padding-right: 2em;
+  padding-bottom: 2em;
+}
+
+.login {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  text-align: right;
+  height: 50px;
+  color: white;
+}
+
+.login a{
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 13px 16px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.login a:hover {
+  background-color:rgb(97, 97, 97)
+}
+
+.login h6, .logout{
+  display: inline-flex;
+  padding: 11px 16px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.container-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-newuser{
+  background-color:rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 15px 0 rgba(72, 115, 53, 0.5);
+  padding: 30px 70px; 
+  width: 40%;
+  border-radius: 20px;
+}
+
+.container-newuser form{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group{
+  padding-left: 3em;
+}
+
+.input-group .form-control{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 0 0 15px 0 rgba(72, 115, 53, 0.5);
+  border: 1.5px solid white;
+}
+
+input[type=submit]{
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 0 0 15px 0 rgba(72, 115, 53, 0.5);
+  margin: 0 35px;
+  width: 80%;
+  margin-bottom: 20px;
+  color: black;
+}
+
+
+.container-img h2{
+  color:black;
+  padding-top: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 70px;
+  width: 100%
+}
+
+body {
+  margin: 0 0;
+  background-color: white;
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  font-family: "PT Serif", serif;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+h1 {
+  display: inline-block;
+  color: black;
+  /* padding-left: 1em; */
+  font-size: 4vmax;
+  margin-top: 2vmax;
+  text-shadow: 2px 2px 2px #949494;
+}
+
+h2, h4 {
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  /* flex-basis: 19%; */
+  text-align: center;
+  padding: 0.3em;
+  margin: 0.3em;
+  width: 20em;
+  min-height: 200px;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 0 0 10px 0 rgba(72, 115, 53, 0.5);
+  margin: 15px 15px;
+}
+
+.container-activity {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.card-newgame {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 0.3em;
+    margin: 0.3em;
+    width: 50em;
+    min-height: 200px;
+    justify-content: center;
+    align-content: center;
+  }
+  
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  font-size: 1em;
+  height: 30px;
+  text-align: center;
+  background-color: white;
+}
+
+.btn-lg{
+    --bs-btn-bg: rgb(176, 201, 121);
+    color: white;
+}
+
+.btn-light{
+  background-color: white;
+  border: 1px solid grey;
+  margin-top: 10px;
+}
+
+.col-sm-2{
+    width: 200px;
+}
+
+.btn-group{
+    padding: 10px 24px; 
+    cursor: pointer; 
+    width: 100%; 
+    display: block; 
+  }
+
+  .btn-cancel{
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 0 0 15px 0 rgba(72, 115, 53, 0.5);
+    margin: 0 35px;
+    width: 80%;
+    margin-bottom: 20px;
+    color: black;
+  }
+  .warning{
+    font-size: 12px;
+    color: rgb(165, 103, 103);
+  }
+
+  .joingame{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .joingame-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logout input[type=submit]{
+    border-radius: 5px;
+    border: rgb(0, 0, 0);
+    background-color: black;
+    color: white;
+    padding: 0.2em 0.5em;
+    font-size: 1em;
+  }
+
+  .logout input[type=submit]:hover{
+    color: red;
+  }
+
+  .organize:hover{
+    color: red;
+  }

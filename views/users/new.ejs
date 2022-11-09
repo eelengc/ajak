@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../../partials/head.ejs') %>
+    <title>Create your account</title>
+  </head>
+  <body>
+    <nav><%- include('../../partials/nav.ejs')%></nav>
+    <br />
+
+    <div class="container-login bg-img">
+      <div class="row g-3 mb-3 container-newuser">
+        <h2>New User Page</h2>
+        <form action="/user" method="POST">
+          <div class="input-group">
+            <label class="col-sm-2 col-form-label"><strong>Name:</strong></label>
+            <div class="col-sm-10">
+              <input
+                type="text"
+                name="name"
+                placeholder="name"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <label class="col-sm-2 col-form-label"><strong>E-mail:</strong></label>
+            <div class="col-sm-10">
+              <input
+                type="email"
+                name="email"
+                placeholder="email"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div class="input-group">
+            <label class="col-sm-2 col-form-label"><strong>Password:</strong></label>
+            <div class="col-sm-10">
+              <input
+                type="password"
+                name="password"
+                placeholder="password"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+          <br />
+          <input type="submit" value="Sign Up" class="signup" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

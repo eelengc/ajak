@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+    <title>New Activity</title>
+  </head>
+  <body>
+    <nav><%- include('../partials/nav.ejs')%></nav>
+    <br />
+    <div class="container container-activity">
+        <h2>Organize your own sports game with details below</h2><br/>
+        <div class="card-newgame">
+            <div class="row mb-3">
+                <form action="/game" method="POST">
+                    <label class="col-sm-2 col-form-label">Game:</label><input type="text" name="game" class="" /><br />
+                    <label class="col-sm-2 col-form-label">Players Needed:</label>
+                    <input
+                      type="number"
+                      name="numberOfPlayers"
+                      min="1"
+                    /><br />
+                    <label class="col-sm-2 col-form-label"> Location:</label>
+                   <input type="text" name="location" /><br />
+                   <label class="col-sm-2 col-form-label">Date:</label>
+                   <input type="text" name="date" placeholder="date/month/time"/><br />
+                   <label class="col-sm-2 col-form-label">Organizer:</label>
+                   <input name="organizer" <% if(locals.currentUser){ %>
+                    value="<%=currentUser.name%>"
+                   <br /><br />
+                   <label class="col-sm-2 col-form-label">Organizer's Email:</label>
+                   <input name="organizerEmail" 
+                    value="<%=currentUser.email%>"
+                   <%}%>/><p class="warning">*Your email will be shown to players who are interested to sign up for this game</p>
+                   <br />
+                    <input type="submit" value="Create game" class="btn btn-light btn-lg"/>
+                    <a href="/game"><button class="btn btn-cancel btn-lg">Cancel</button></a>
+            </div>
+        </div>
+      </form>
+    </div>
+  </body>
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+</footer>
+</html>
