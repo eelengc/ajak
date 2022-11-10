@@ -20,8 +20,13 @@
        <br/>
     </div>
     <div class="joingame-button">
+      <a href="mailto: <%=activity.organizerEmail%>?subject=I would like to join your game (<%=activity.game%>-<%=activity.date%>)&body=I came across your game on AJAK and would like to join. Please get in touch"><button class="btn btn-light">Send Email</button></a><br/></div>
+    <div class="joingame-button">
     <a href="/game"><button class="btn btn-light">Back to other games</button></a></div>
       </div>
     </div>
   </body>
+  <footer>
+    <%- include('../partials/footer.ejs') %>
+</footer>
 </html>
