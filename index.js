@@ -1,13 +1,13 @@
 const express = require('express');
 const session = require('express-session')
 const methodOverride = require('method-override');
+const dotenv = require('dotenv').config();
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const app = express();
 const PORT = process.env.PORT || 3000;
-mongoURI = process.env.MONGODB_URI || 'mongodb+srv://eeleng1:eeleng1@cluster0.g2edfxy.mongodb.net/gameActivity'
 
-mongoose.connect(mongoURI, {useNewUrlParser: true}, ()=>{
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true}, ()=>{
     console.log("Mongo DB is connected")
 });
 
